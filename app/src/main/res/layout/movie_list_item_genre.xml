@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="genre"
+            type="String" />
+        <variable
+            name="genreClickListener"
+            type="com.podium.technicalchallenge.ui.dashboard.GenreClickListener" />
+    </data>
+    <TextView
+        android:id="@+id/tvGenreName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{genre}"
+        android:layout_margin="5dp"
+        android:onClick="@{genreClickListener::onClickTitle}"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:typeface="serif">
+
+    </TextView>
+</layout>

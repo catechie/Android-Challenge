@@ -1,0 +1,3 @@
+query GetAllGenres {
+  genres
+} 

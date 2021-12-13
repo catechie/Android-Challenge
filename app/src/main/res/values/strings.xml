@@ -1,6 +1,17 @@
 <resources>
     <string name="app_name">Podium Techinal Challenge</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">Browse by All</string>
+    <string name="title_dashboard">Browse by Genre</string>
+    <string name="title_notifications">Movies: Top 5</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="available_genres">Available Genres</string>
+    <string name="movie_image">Movie Image</string>
+    <string name="movie_detail">Movie Detail</string>
+    <string name="errorMsg">Sorry, something went wrong, please check back later</string>
+    <string name="all_movies">All Movies</string>
+    <string name="top_5_movies">Top 5 movies</string>
+    <string name="cast_information">Cast Information</string>
+    <string name="allGenres">All genres</string>
+    <string name="noResult">Sorry, no result</string>
 </resources>

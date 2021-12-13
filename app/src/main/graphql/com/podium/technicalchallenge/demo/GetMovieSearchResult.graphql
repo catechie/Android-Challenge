@@ -1,5 +1,5 @@
-query GetMoviesQuery {
-    movies (orderBy: "voteAverage" sort: DESC){
+query GetMovieSearchResult ($search: String! $genre: String!){
+    movies (search: $search genre: $genre orderBy: "voteAverage" sort: DESC ){
         id
         title
         genres

@@ -3,12 +3,76 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_dashboard">
+    app:startDestination="@id/movieList">
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.podium.technicalchallenge.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/movieList"
+        android:name="com.podium.technicalchallenge.ui.dashboard.AllMoviesFragment"
+        android:label="fragment_all_m"
+        tools:layout="@layout/fragment_movie_list">
+        <action
+            android:id="@+id/action_allM_to_movieDetilFragment"
+            app:destination="@id/movieDetailFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:launchSingleTop="true" />
+        <argument
+            android:name="genre"
+            android:defaultValue=""
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/top5Movies"
+        android:name="com.podium.technicalchallenge.ui.dashboard.Top5Movies"
+        android:label="fragment_top5"
+        tools:layout="@layout/fragment_top5">
+        <action
+            android:id="@+id/action_top5F_to_movieDetilFragment"
+            app:destination="@id/movieDetailFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.podium.technicalchallenge.ui.dashboard.MovieDetailFragment"
+        android:label="fragment_movie_detail"
+        tools:layout="@layout/fragment_movie_detail">
+        <argument
+            android:name="id"
+            android:defaultValue="664767"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieListByGenre"
+        android:name="com.podium.technicalchallenge.ui.dashboard.MovieListByGenre"
+        android:label="MovieListByGenre">
+        <argument
+            android:name="genre"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_movieListByGenre_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/genresFragment"
+        android:name="com.podium.technicalchallenge.ui.dashboard.GenresFragment"
+        android:label="GenresFragment" >
+        <action
+            android:id="@+id/action_genresFragment_to_movieListByGenre"
+            app:destination="@id/movieListByGenre"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieSearchFragment"
+        android:name="com.podium.technicalchallenge.ui.dashboard.MovieSearchFragment"
+        android:label="MovieSearchFragment" >
+        <action
+            android:id="@+id/action_movieSearchFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+
 
 </navigation>
